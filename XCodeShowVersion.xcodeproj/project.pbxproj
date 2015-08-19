@@ -18,8 +18,10 @@
 		D61A72E91B8435C300C881D2 /* XCodeShowVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCodeShowVersion.h; sourceTree = "<group>"; };
 		D61A72EA1B8435C300C881D2 /* XCodeShowVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCodeShowVersion.m; sourceTree = "<group>"; };
 		D6A3714B1B84479B00697351 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		D6A3714D1B8447C300697351 /* IDEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEKit.framework; path = ../../../../../Applications/Xcode.app/Contents/Frameworks/IDEKit.framework; sourceTree = "<group>"; };
+		D6A3714D1B8447C300697351 /* IDEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEKit.framework; path = /Applications/Xcode.app/Contents/Frameworks/IDEKit.framework; sourceTree = "<absolute>"; };
 		D6A8A47D1B84468300EA17BA /* XcodeComponents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XcodeComponents.h; sourceTree = "<group>"; };
+		D6B687941B84526300B19FC3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D6B687961B84536900B19FC3 /* version.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = version.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,8 +40,9 @@
 		D61A72D51B84340200C881D2 = {
 			isa = PBXGroup;
 			children = (
-				D6A3714D1B8447C300697351 /* IDEKit.framework */,
-				D6A3714B1B84479B00697351 /* CoreFoundation.framework */,
+				D6B687951B84531D00B19FC3 /* Document */,
+				D6B687941B84526300B19FC3 /* README.md */,
+				D69572CA1B844DC9006DE40A /* Framework */,
 				D61A72E01B84340200C881D2 /* XCodeShowVersion */,
 				D61A72DF1B84340200C881D2 /* Products */,
 			);
@@ -80,12 +83,29 @@
 			name = Class;
 			sourceTree = "<group>";
 		};
+		D69572CA1B844DC9006DE40A /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				D6A3714B1B84479B00697351 /* CoreFoundation.framework */,
+				D6A3714D1B8447C300697351 /* IDEKit.framework */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
 		D6A8A4791B84453400EA17BA /* Xcode */ = {
 			isa = PBXGroup;
 			children = (
 				D6A8A47D1B84468300EA17BA /* XcodeComponents.h */,
 			);
 			name = Xcode;
+			sourceTree = "<group>";
+		};
+		D6B687951B84531D00B19FC3 /* Document */ = {
+			isa = PBXGroup;
+			children = (
+				D6B687961B84536900B19FC3 /* version.png */,
+			);
+			name = Document;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -49,8 +49,10 @@ static XCodeShowVersion* _sharedInstance = nil;
 }
 
 -(NSString*)getXcodeVersion {
+    NSString* result;
     IDEWelcomeWindowController* vc = [IDEWelcomeWindowController sharedWelcomeWindowController];
-    return vc.versionLabel.stringValue;
+    result = vc.versionLabel.stringValue ? vc.versionLabel.stringValue : @"version unknown";
+    return result;
 }
 
 -(void)initMenu {
