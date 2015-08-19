@@ -6,9 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D61A72EB1B8435C300C881D2 /* XCodeShowVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = D61A72EA1B8435C300C881D2 /* XCodeShowVersion.m */; };
+		D6A3714C1B84479B00697351 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A3714B1B84479B00697351 /* CoreFoundation.framework */; };
+		D6A3714E1B8447C300697351 /* IDEKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A3714D1B8447C300697351 /* IDEKit.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
-		D61A72DE1B84340200C881D2 /* XCodeShowVersion.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XCodeShowVersion.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		D61A72DE1B84340200C881D2 /* XCodeShowVersion.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XCodeShowVersion.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		D61A72E21B84340200C881D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D61A72E91B8435C300C881D2 /* XCodeShowVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCodeShowVersion.h; sourceTree = "<group>"; };
+		D61A72EA1B8435C300C881D2 /* XCodeShowVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCodeShowVersion.m; sourceTree = "<group>"; };
+		D6A3714B1B84479B00697351 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		D6A3714D1B8447C300697351 /* IDEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEKit.framework; path = ../../../../../Applications/Xcode.app/Contents/Frameworks/IDEKit.framework; sourceTree = "<group>"; };
+		D6A8A47D1B84468300EA17BA /* XcodeComponents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XcodeComponents.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -16,6 +27,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6A3714E1B8447C300697351 /* IDEKit.framework in Frameworks */,
+				D6A3714C1B84479B00697351 /* CoreFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -25,6 +38,8 @@
 		D61A72D51B84340200C881D2 = {
 			isa = PBXGroup;
 			children = (
+				D6A3714D1B8447C300697351 /* IDEKit.framework */,
+				D6A3714B1B84479B00697351 /* CoreFoundation.framework */,
 				D61A72E01B84340200C881D2 /* XCodeShowVersion */,
 				D61A72DF1B84340200C881D2 /* Products */,
 			);
@@ -33,7 +48,7 @@
 		D61A72DF1B84340200C881D2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D61A72DE1B84340200C881D2 /* XCodeShowVersion.bundle */,
+				D61A72DE1B84340200C881D2 /* XCodeShowVersion.xcplugin */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -41,6 +56,8 @@
 		D61A72E01B84340200C881D2 /* XCodeShowVersion */ = {
 			isa = PBXGroup;
 			children = (
+				D6A8A4791B84453400EA17BA /* Xcode */,
+				D61A72E81B8435AA00C881D2 /* Class */,
 				D61A72E11B84340200C881D2 /* Supporting Files */,
 			);
 			path = XCodeShowVersion;
@@ -52,6 +69,23 @@
 				D61A72E21B84340200C881D2 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D61A72E81B8435AA00C881D2 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				D61A72E91B8435C300C881D2 /* XCodeShowVersion.h */,
+				D61A72EA1B8435C300C881D2 /* XCodeShowVersion.m */,
+			);
+			name = Class;
+			sourceTree = "<group>";
+		};
+		D6A8A4791B84453400EA17BA /* Xcode */ = {
+			isa = PBXGroup;
+			children = (
+				D6A8A47D1B84468300EA17BA /* XcodeComponents.h */,
+			);
+			name = Xcode;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,7 +105,7 @@
 			);
 			name = XCodeShowVersion;
 			productName = XCodeShowVersion;
-			productReference = D61A72DE1B84340200C881D2 /* XCodeShowVersion.bundle */;
+			productReference = D61A72DE1B84340200C881D2 /* XCodeShowVersion.xcplugin */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -120,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D61A72EB1B8435C300C881D2 /* XCodeShowVersion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,11 +242,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Frameworks",
+				);
 				INFOPLIST_FILE = XCodeShowVersion/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Application Support/Developer/Shared/Xcode/Plug-ins";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
+				SKIP_INSTALL = NO;
+				WRAPPER_EXTENSION = xcplugin;
 			};
 			name = Debug;
 		};
@@ -219,11 +260,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Frameworks",
+				);
 				INFOPLIST_FILE = XCodeShowVersion/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Application Support/Developer/Shared/Xcode/Plug-ins";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
+				SKIP_INSTALL = NO;
+				WRAPPER_EXTENSION = xcplugin;
 			};
 			name = Release;
 		};
@@ -246,6 +293,7 @@
 				D61A72E71B84340200C881D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
