@@ -13,6 +13,7 @@
 @implementation XCodeShowVersion
 
 static XCodeShowVersion* _sharedInstance = nil;
+#define kVersionUnknown @"version unknown"
 
 +(void)pluginDidLoad:(NSBundle*)plugin {
     NSLog(@"XcodeShowVersion test!!!");
@@ -44,14 +45,13 @@ static XCodeShowVersion* _sharedInstance = nil;
 }
 
 -(void)applicationDidFinishLaunching:(NSNotification*)noti {
-    NSLog(@"XcodeShowVersion launching!!");
     [self initMenu];
 }
 
 -(NSString*)getXcodeVersion {
     NSString* result;
-    IDEWelcomeWindowController* vc = [IDEWelcomeWindowController sharedWelcomeWindowController];
-    result = vc.versionLabel.stringValue ? vc.versionLabel.stringValue : @"version unknown";
+    IDEAboutWindowController* vc = [IDEAboutWindowController sharedAboutWindowController];
+    result = [vc _versionString] ? [vc _versionString] : kVersionUnknown;
     return result;
 }
 
@@ -66,10 +66,6 @@ static XCodeShowVersion* _sharedInstance = nil;
     NSMenuItem *newMenuItem = [[NSMenuItem alloc] initWithTitle:[self getXcodeVersion] action:NULL keyEquivalent:@""];
     [newMenuItem setSubmenu:versionMenu];
     [mainMenu addItem:newMenuItem];
-}
-
--(void)dmmyAction:(id)obj {
-    
 }
 
 - (void)dealloc

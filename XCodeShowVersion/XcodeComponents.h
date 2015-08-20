@@ -9,10 +9,10 @@
 #ifndef XCodeShowVersion_XcodeComponents_h
 #define XCodeShowVersion_XcodeComponents_h
 
-@interface IDEWelcomeWindowController : NSWindowController
+@interface IDEAboutWindowController : NSWindowController
 
-+ (id)sharedWelcomeWindowController;
-@property __weak NSTextField *versionLabel; // @synthesize versionLabel=_versionLabel;
++ (id)sharedAboutWindowController;
+- (id)_versionString;
 
 @end
 
