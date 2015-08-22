@@ -16,7 +16,6 @@ static XCodeShowVersion* _sharedInstance = nil;
 #define kVersionUnknown @"version unknown"
 
 +(void)pluginDidLoad:(NSBundle*)plugin {
-    NSLog(@"XcodeShowVersion test!!!");
     [self sharedInstance];
 }
 
